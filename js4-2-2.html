@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    window.onload = function() {
+        var input = document.getElementById("input");
+        var btn = document.getElementById("btn");
+        var flag = true;
+        var n = 2;
+        btn.onclick = function() {
+            var val = input.value;
+            if (flag) {
+                flag = !flag;
+                if (val == 8) {
+                    console.log("妈的，一次就猜对了");
+                } else if (val > 8) {
+                    console.log("大了");
+                } else {
+                    console.log("小了");
+                }
+            } else {
+                if (n > 0) {
+                    if (val == 8) {
+                        console.log("妈的，终于猜对了");
+                    } else if (val > 8) {
+                        console.log("大了");
+                    } else {
+                        console.log("小了");
+                    }
+                    n--;
+                }
+            }
+            if(val==8 || n == 0){
+                console.log("游戏结束");
+                btn.onclick = null;
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <input id="input" type="text" name="">
+    <button id="btn">按钮</button>
+</body>
+
+</html>

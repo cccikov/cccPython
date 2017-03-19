@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    window.onload = function() {
+        var input = document.getElementById("input");
+        var btn = document.getElementById("btn");
+        var n = 2;
+        btn.onclick = function() {
+            var val = input.value;
+            if (n >= 0) {
+                if (val == 8) {
+                    if (n == 2) {
+                        console.log("妈的，一次就猜对了");
+                        input.style.display = "none";
+                    } else {
+                        console.log("妈的，终于猜对了");
+                        input.style.display = "none";
+                    }
+                } else {
+                    if (val > 8) {
+                        console.log("大了");
+                        input.value = "";
+                        input.focus();
+                    } else {
+                        console.log("小了");
+                        input.value = "";
+                        input.focus();
+                    }
+                    if (n == 0) {
+                        console.log("机会用完了");
+                    }
+                }
+            }
+
+            // var rightStr = n == 2 ? "妈的，一次就猜对了" : "妈的，终于猜对了";
+            // var errorStr = val > 8 ? "大了" : "小了";
+            // if (n >= 0) {
+            //     if (val == 8) {
+            //         console.log(rightStr);
+            //         input.style.display = "none";
+            //     } else {
+            //         console.log(errorStr);
+            //         input.value = "";
+            //         input.focus();
+            //         if (n == 0) {
+            //             console.log("机会用完了");
+            //         }
+            //     }
+            // }
+            n--;
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <input id="input" type="text" name="">
+    <button id="btn">按钮</button>
+</body>
+
+</html>
