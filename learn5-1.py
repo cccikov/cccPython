@@ -35,5 +35,6 @@ print(toInt,toStr,toFloat);# 123456 123123 12.0
 theType1 = type(toInt);
 theType2 = type(toStr);
 theType3 = type(toFloat);
-theType4 = type(theNull);
-print(theType1,theType2,theType3,theType4) # <class 'int'> <class 'str'> <class 'float'> <class 'NoneType'>
+theType4 = type(theBool);
+theType5 = type(theNull);
+print(theType1,theType2,theType3,theType4,theType5) # <class 'int'> <class 'str'> <class 'float'> <class 'bool'> <class 'NoneType'>
